@@ -76,5 +76,40 @@
             "T-vK"
         ],
         "notes": ""
+    },
+    {
+        "name": "HP Pavilion G6-2348SG",
+        "cpu": "Intel Core i7 3632QM",
+        "gpus": [
+            {
+                "name": "AMD Radeon HD 7670M",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Not possible.",
+                    "Linux": "Not possible."
+                }
+            },
+            {
+                "name": "Intel® HD Graphics 4000",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Not possible.",
+                    "Linux": "Not possible."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "No",
+            "uefi-supports-iommu": "No",
+            "igpu-usable": "Yes",
+            "muxed": "Probably yes"
+        },
+        "tested-by": [
+            "T-vK"
+        ],
+        "notes": ""
     }
 ]
