@@ -1,0 +1,80 @@
+[
+    {
+        "name": "Razer Blade 15 (2018 Basic)",
+        "cpu": "Intel Core i7-8750H",
+        "gpus": [
+            {
+                "name": "GTX 1060 Mobile with Max-Q design (6GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but Nvidia driver fails with error 43.",
+                    "Linux": "Untested, but probably works."
+                }
+            },
+            {
+                "name": "Intel® UHD Graphics 630",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Untested, but probably works.",
+                    "Linux": "Untested, but probably works."
+                }
+            },
+            {
+                "name": "GTX 970",
+                "type": "eGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but Nvidia driver fails with error 43.",
+                    "Linux": "Untested, but probably works."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes, no issues",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably yes"
+        },
+        "tested-by": [
+            "T-vK"
+        ],
+        "notes": "Supports TB3 eGPUs"
+    },
+    {
+        "name": "MSI GF72 8RE-032",
+        "cpu": "Intel Core i7-8750H",
+        "gpus": [
+            {
+                "name": "GTX 1060 Mobile (6GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but Nvidia driver fails with error 43.",
+                    "Linux": "Untested, but probably works."
+                }
+            },
+            {
+                "name": "Intel® UHD Graphics 630",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Untested, but probably works.",
+                    "Linux": "Untested, but probably works."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably yes"
+        },
+        "tested-by": [
+            "T-vK"
+        ],
+        "notes": ""
+    }
+]
