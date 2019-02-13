@@ -117,7 +117,7 @@
                 const iGpus = getGpuGuestInfo(device.gpus, 'iGPU')
                 const eGpus = getGpuGuestInfo(device.gpus, 'eGPU')
                 const checklist = checklistToHtml(device.checklist)
-                const testedBy = device['tested-by'].join('<br/>')
+                const testedBy = device['tested-by'].map(tester=>`<a href="${tester.url}">${tester.name}</a`).join('<br/>')
                 const notes = device.notes
 
                 $('#notebook-compatibility-list>tbody').append(`

@@ -38,7 +38,7 @@
             "muxed": "Probably yes"
         },
         "tested-by": [
-            "T-vK"
+            { "name": "T-vK", "url": "https://github.com/T-vK" }
         ],
         "notes": "Supports TB3 eGPUs"
     },
@@ -73,7 +73,7 @@
             "muxed": "Probably yes"
         },
         "tested-by": [
-            "T-vK"
+            { "name": "T-vK", "url": "https://github.com/T-vK" }
         ],
         "notes": ""
     },
@@ -108,7 +108,42 @@
             "muxed": "Probably yes"
         },
         "tested-by": [
-            "T-vK"
+            { "name": "T-vK", "url": "https://github.com/T-vK" }
+        ],
+        "notes": ""
+    },
+    {
+        "name": "OVERPOWERED Gaming Laptop 15+",
+        "cpu": "Intel Core i7-8750H",
+        "gpus": [
+            {
+                "name": "GTX 1060 (6GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but Nvidia driver fails with error 43.",
+                    "Linux": "Untested, but probably works."
+                }
+            },
+            {
+                "name": "Intel® UHD Graphics 630",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Untested, but probably works.",
+                    "Linux": "Untested, but probably works."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably yes"
+        },
+        "tested-by": [
+            { "name": "jmandawg", "url": "https://github.com/jscinoz/optimus-vfio-docs/issues/2#issuecomment-462598102" }
         ],
         "notes": ""
     }
