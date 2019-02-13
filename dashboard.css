@@ -2,6 +2,41 @@ body {
   font-size: .875rem;
 }
 
+nav div ul li a{
+  color: #FFFFFF;
+}
+
+nav div ul li {
+  margin-right: 4px;
+}
+
+#particles {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+}
+.table-responsive {
+    background-color: #FFFC;
+}
+
+@media (max-width: 768px) {
+    nav div ul li {
+      margin-bottom: 4px;
+    }
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background-color: #232323;
+}
+
+.nav-link:focus, .nav-link:hover {
+  color: #FFFFFF;
+  background-color: #232323;
+}
+
 .feather {
   width: 16px;
   height: 16px;

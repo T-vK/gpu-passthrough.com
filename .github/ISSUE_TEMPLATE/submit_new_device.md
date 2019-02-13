@@ -1,3 +1,9 @@
+---
+title: 'Your device name and model'
+labels: new device
+assignees: T-vK
+---
+
 If you found a new device, then please use the following JSON and delete the data from it, then insert as much data about your device as you can.  
 Thanks you. :)  
 

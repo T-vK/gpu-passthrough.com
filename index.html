@@ -16,6 +16,7 @@
   </head>
 
   <body>
+    <div id="particles"></div>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
           <a class="navbar-brand" href="#">GPU Passthrough</a>
@@ -23,9 +24,9 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Notebooks <span class="sr-only">(current)</span></a>
+            <ul class="nav nav-pills nav-fill mr-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Notebooks <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="https://github.com/T-vK/gpu-passthrough.com/issues/new?template=submit_new_device.md">Submit New Device</a>
@@ -33,10 +34,16 @@
               <li class="nav-item">
                 <a class="nav-link" href="https://github.com/T-vK/gpu-passthrough.com/issues/new">Contact</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/T-vK/MobilePassThrough/#screenshot-of-the-compatibility-check-script">How to check your device</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/T-vK/MobilePassThrough">How to set up GPU passthrough on your device</a>
+              </li>
             </ul>
             <form class="form-inline mt-2 mt-md-0">
               <input class="form-control mr-sm-2" type="text" disabled placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
             </form>
           </div>
         </nav>
@@ -44,8 +51,6 @@
 
   <div class="container-fluid">
     <div class="row">
-
-
       <main role="main" class="col-md-12 col-lg-12 px-4">
 
         <h2>Notebook Compatibility List</h2>
@@ -68,23 +73,53 @@
           </table>
         </div>
 
-        <div class="flex-md-nowrap align-items-center">
-            <div class="alert alert-success" role="alert">
-                If you tested a device, please open an issue or pull request on the <a href="https://github.com/T-vK/gpu-passthourough.com" class="alert-link">Github project for this website</a>. Thank you. :)
-            </div>
-        </div>
-        <div class="flex-md-nowrap align-items-center">
-            <div class="alert alert-success" role="alert">
-                Want to check if your device is compatible? Check out project <a href="https://github.com/T-vK/MobilePassThrough/" class="alert-link">MobilePassThrough</a>. It can also set up GPU passthrough for you atuomatically.
-            </div>
-        </div>
-
       </main>
     </div>
   </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+
+    <script src="https://pixijs.download/dev-graphics-batch-pool/pixi.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/T-vK/SuperParticles@master/SuperParticles.js"></script>
+    <script>
+        window.onload = function(){
+            var superParticles = new SuperParticles({
+                "maxFps": 30,
+                "autoStartAnimation": true,
+                "container": {
+                    "backgroundCssRule": ""
+                },
+                "pixiApp": {
+                    "backgroundColor": "0xFFFFFF",
+                    "antialias": true,
+                    "transparent": false,
+                    "forceFXAA": false,
+                    "powerPreference": "high-performance",
+                    "resolution": 1
+                },
+                "particles": {
+                    "amount": 80,
+                    "radius": 2,
+                    "velocity": 10,
+                    "color": "0xCCCCCC",
+                    "fadeInDuration": 3000,
+                    "fadeOutDuration": 600,
+                    "keepRelativePositionOnResize": true
+                },
+                "lines": {
+                    "minDistance": 0.09,
+                    "color": "0xCCCCCC",
+                    "maxOpacity": 0.6,
+                    "thickness": 1,
+                    "distanceBasedTransparency": true
+                },
+                "debug": {
+                    "showFps": false
+                }
+            })
+        }
+    </script>
 
     <script>
         function getGpuGuestInfo(gpus,type) {
