@@ -460,7 +460,7 @@
         "tested-by": [
             { "name": "metabubble", "url": "https://gist.github.com/Misairu-G/616f7b2756c488148b7309addc940b28#gistcomment-2625719" }
         ],
-        "notes": "dGPU passthrough requires SeaBIOS instead of UEFI (OVMF)"
+        "notes": ""
     },
     {
         "name": "CLEVO P950ER",
