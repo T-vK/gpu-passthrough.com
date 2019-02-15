@@ -146,5 +146,390 @@
             { "name": "jmandawg", "url": "https://github.com/jscinoz/optimus-vfio-docs/issues/2#issuecomment-462598102" }
         ],
         "notes": ""
+    },
+    {
+        "name": "ASUS ROG G551JW",
+        "cpu": "Intel Core i7-4720HQ",
+        "gpus": [
+            {
+                "name": "GTX 960M (2GB/4GB DDR3)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but some apps only run with RDP",
+                    "Linux": "Unknown."
+                }
+            },
+            {
+                "name": "Intel® HD Graphics 4600",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Unknown.",
+                    "Linux": "Unknown."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "No"
+        },
+        "tested-by": [
+            { "name": "DrownedFire", "url": "https://www.reddit.com/r/VFIO/comments/8gv60l/current_state_of_optimus_muxless_laptop_gpu/" }
+        ],
+        "notes": ""
+    },
+    {
+        "name": "Gigabyte Aero 15X v8",
+        "cpu": "Intel Core i7-8750H",
+        "gpus": [
+            {
+                "name": "GTX 1070 with Max-Q design (8GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but Nvidia driver fails with error 43.",
+                    "Linux": "Works."
+                }
+            },
+            {
+                "name": "Intel® UHD Graphics 630",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Untested, but probably works.",
+                    "Linux": "Untested, but probably works."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably yes"
+        },
+        "tested-by": [
+            { "name": "KenMasters20XX", "url": "https://github.com/jscinoz/optimus-vfio-docs/issues/2#issuecomment-412601884" }
+        ],
+        "notes": ""
+    },
+    {
+        "name": "GS63VR 7RF REV:1.0",
+        "cpu": "Intel Core i7-7700HQ",
+        "gpus": [
+            {
+                "name": "GTX 1060 Mobile (6GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but Nvidia driver fails with error 43.",
+                    "Linux": "Works."
+                }
+            },
+            {
+                "name": "Intel® HD Graphics 630",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Untested, but probably works.",
+                    "Linux": "Untested, but probably works."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably yes"
+        },
+        "tested-by": [
+            { "name": "dreamcast96", "url": "https://github.com/jscinoz/optimus-vfio-docs/issues/2#issuecomment-461693425" }
+        ],
+        "notes": ""
+    },
+    {
+        "name": "MSI GS60-040XFR",
+        "cpu": "Intel Core i7-4720HQ",
+        "gpus": [
+            {
+                "name": "GTX 970M (3GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but similar issue as with the ASUS ROG G551JW",
+                    "Linux": "Unknown."
+                }
+            },
+            {
+                "name": "Intel® HD Graphics 4600",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Unknown.",
+                    "Linux": "Unknown."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably yes"
+        },
+        "tested-by": [
+            { "name": "Perdouille", "url": "https://www.reddit.com/r/VFIO/comments/7d27sz/you_can_now_passthrough_your_dgpu_as_you_wish/dqo6jxf/" }
+        ],
+        "notes": ""
+    },
+    {
+        "name": "MSI GS60 2PC",
+        "cpu": "Intel Core i7-4720HQ",
+        "gpus": [
+            {
+                "name": "GTX 860M (2GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works.",
+                    "Linux": "Unknown."
+                }
+            },
+            {
+                "name": "Intel® HD Graphics 4600",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Unknown.",
+                    "Linux": "Unknown."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably yes"
+        },
+        "tested-by": [
+            { "name": "qgnox", "url": "https://www.reddit.com/r/VFIO/comments/7d27sz/you_can_now_passthrough_your_dgpu_as_you_wish/drq3ewm/" }
+        ],
+        "notes": ""
+    },
+    {
+        "name": "ASUS G751JM",
+        "cpu": "Intel Core i7-4710HQ",
+        "gpus": [
+            {
+                "name": "GTX 860M (2GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but similar issue as with the ASUS ROG G551JW",
+                    "Linux": "Unknown."
+                }
+            },
+            {
+                "name": "Intel® HD Graphics 4600",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Unknown.",
+                    "Linux": "Unknown."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably yes"
+        },
+        "tested-by": [
+            { "name": "d0ku", "url": "https://gist.github.com/Misairu-G/616f7b2756c488148b7309addc940b28#gistcomment-2683129" }
+        ],
+        "notes": ""
+    },
+    {
+        "name": "Dell XPS 15 9550",
+        "cpu": "Intel Core i7-6700HQ",
+        "gpus": [
+            {
+                "name": "GTX 960M (2GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but Nvidia driver fails with error 43.",
+                    "Linux": "Probably works."
+                }
+            },
+            {
+                "name": "Intel® HD Graphics 530",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Probably works.",
+                    "Linux": "Probably works."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably yes."
+        },
+        "tested-by": [
+            { "name": "Lukypie", "url": "https://gist.github.com/Misairu-G/616f7b2756c488148b7309addc940b28#gistcomment-2674241" }
+        ],
+        "notes": ""
+    },
+    {
+        "name": "GT70 2PE Dominator Pro",
+        "cpu": "Intel Core i7-4800MQ",
+        "gpus": [
+            {
+                "name": "GTX 880M (GDDR5 8GB/4GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works.",
+                    "Linux": "Probably works."
+                }
+            },
+            {
+                "name": " Intel® HD Graphics 4600 ",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Probably works.",
+                    "Linux": "Probably works."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Unknown."
+        },
+        "tested-by": [
+            { "name": "bash64", "url": "https://gist.github.com/Misairu-G/616f7b2756c488148b7309addc940b28#gistcomment-2622108" }
+        ],
+        "notes": "dGPU passthrough requires SeaBIOS instead of UEFI (OVMF)"
+    },
+    {
+        "name": "Dell Precision 7510",
+        "cpu": "Intel Xeon E3-1200 v5",
+        "gpus": [
+            {
+                "name": "Nvidia Quadro M2000M",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but Nvidia driver fials with error 43.",
+                    "Linux": "Probably works."
+                }
+            },
+            {
+                "name": " Intel® HD Graphics P530",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Probably works.",
+                    "Linux": "Probably works."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably muxed."
+        },
+        "tested-by": [
+            { "name": "metabubble", "url": "https://gist.github.com/Misairu-G/616f7b2756c488148b7309addc940b28#gistcomment-2625719" }
+        ],
+        "notes": "dGPU passthrough requires SeaBIOS instead of UEFI (OVMF)"
+    },
+    {
+        "name": "CLEVO P950ER",
+        "cpu": "Intel Core i7-8750H",
+        "gpus": [
+            {
+                "name": "GTX 1070 with Max-Q design (8GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but Nvidia driver fails with error 43.",
+                    "Linux": "Probably works."
+                }
+            },
+            {
+                "name": "Intel® UHD Graphics 630",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Untested, but probably works.",
+                    "Linux": "Untested, but probably works."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably muxed."
+        },
+        "tested-by": [
+            { "name": "s2156945", "url": "https://gist.github.com/Misairu-G/616f7b2756c488148b7309addc940b28#gistcomment-2646390" }
+        ],
+        "notes": ""
+    },
+    {
+        "name": "Clevo N957TP6",
+        "cpu": "Unknown (Intel)",
+        "gpus": [
+            {
+                "name": "Unknown (Nvidia)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but Nvidia driver fails with error 43.",
+                    "Linux": "Probably works."
+                }
+            },
+            {
+                "name": "Unknown",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Untested, but probably works.",
+                    "Linux": "Untested, but probably works."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably muxed."
+        },
+        "tested-by": [
+            { "name": "Pilo11", "url": "https://gist.github.com/Misairu-G/616f7b2756c488148b7309addc940b28#gistcomment-2647387" }
+        ],
+        "notes": ""
     }
 ]
