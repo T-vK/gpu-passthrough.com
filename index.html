@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
     <link href="./dashboard.css" rel="stylesheet">
+    <!--<link href="https://drvic10k.github.io/bootstrap-sortable/Contents/bootstrap-sortable.css" rel="stylesheet">-->
 
   </head>
 
@@ -19,7 +20,7 @@
     <div id="particles"></div>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-          <a class="navbar-brand" href="#">GPU Passthrough</a>
+          <a class="navbar-brand" href="#">Mobile GPU Passthrough</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -42,8 +43,12 @@
               </li>
             </ul>
             <form class="form-inline mt-2 mt-md-0">
-              <input class="form-control mr-sm-2" type="text" disabled placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+                <div class="input-group ">
+                    <input type="text" disabled="" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="Sorry, not implemented yet" class="form-control">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" disabled="" type="button" id="button-addon2">Search</button>
+                    </div>
+                </div>
             </form>
           </div>
         </nav>
@@ -55,7 +60,7 @@
 
         <h2>Notebook Compatibility List</h2>
         <div class="table-responsive">
-          <table id="notebook-compatibility-list" class="table table-striped table-sm">
+          <table id="notebook-compatibility-list" class="sortable table table-striped table-sm">
             <thead>
               <tr>
                 <th>Device</th>
@@ -82,7 +87,10 @@
 
     <script src="https://pixijs.download/dev-graphics-batch-pool/pixi.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/T-vK/SuperParticles@master/SuperParticles.js"></script>
+
+    <!--<script src="https://drvic10k.github.io/bootstrap-sortable/Scripts/bootstrap-sortable.js"></script>-->
     <script>
+
         window.onload = function(){
             var superParticles = new SuperParticles({
                 "maxFps": 30,
@@ -165,6 +173,7 @@
                     </tr>
                 `);
             });
+            //$('#notebook-compatibility-list').on('sorted', function () {console.log("Table was sorted."); });
         });
     </script>
   </body>
