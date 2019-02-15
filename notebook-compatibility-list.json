@@ -366,15 +366,15 @@
                 "type": "dGPU",
                 "passthrough-guests": {
                     "Windows": "Works, but Nvidia driver fails with error 43.",
-                    "Linux": "Probably works."
+                    "Linux": "Untested, but probably works."
                 }
             },
             {
                 "name": "Intel® HD Graphics 530",
                 "type": "iGPU",
                 "passthrough-guests": {
-                    "Windows": "Probably works.",
-                    "Linux": "Probably works."
+                    "Windows": "Untested, but probably works.",
+                    "Linux": "Untested, but probably works."
                 }
             }
         ],
@@ -401,15 +401,15 @@
                 "type": "dGPU",
                 "passthrough-guests": {
                     "Windows": "Works.",
-                    "Linux": "Probably works."
+                    "Linux": "Untested, but probably works."
                 }
             },
             {
                 "name": " Intel® HD Graphics 4600 ",
                 "type": "iGPU",
                 "passthrough-guests": {
-                    "Windows": "Probably works.",
-                    "Linux": "Probably works."
+                    "Windows": "Untested, but probably works.",
+                    "Linux": "Untested, but probably works."
                 }
             }
         ],
@@ -436,15 +436,15 @@
                 "type": "dGPU",
                 "passthrough-guests": {
                     "Windows": "Works, but Nvidia driver fials with error 43.",
-                    "Linux": "Probably works."
+                    "Linux": "Untested, but probably works."
                 }
             },
             {
                 "name": " Intel® HD Graphics P530",
                 "type": "iGPU",
                 "passthrough-guests": {
-                    "Windows": "Probably works.",
-                    "Linux": "Probably works."
+                    "Windows": "Untested, but probably works.",
+                    "Linux": "Untested, but probably works."
                 }
             }
         ],
@@ -471,7 +471,7 @@
                 "type": "dGPU",
                 "passthrough-guests": {
                     "Windows": "Works, but Nvidia driver fails with error 43.",
-                    "Linux": "Probably works."
+                    "Linux": "Untested, but probably works."
                 }
             },
             {
@@ -506,7 +506,7 @@
                 "type": "dGPU",
                 "passthrough-guests": {
                     "Windows": "Works, but Nvidia driver fails with error 43.",
-                    "Linux": "Probably works."
+                    "Linux": "Untested, but probably works."
                 }
             },
             {
