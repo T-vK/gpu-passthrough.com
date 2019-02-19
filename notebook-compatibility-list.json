@@ -113,7 +113,7 @@
         "notes": ""
     },
     {
-        "name": "Asus G752VS-BA329T",
+        "name": "ASUS G752VS-BA329T",
         "cpu": "Intel Core i7-7700HQ",
         "gpus": [
             {
@@ -428,7 +428,7 @@
         "notes": ""
     },
     {
-        "name": "GT70 2PE Dominator Pro",
+        "name": "MSI GT70 2PE Dominator Pro",
         "cpu": "Intel Core i7-4800MQ",
         "gpus": [
             {
