@@ -113,6 +113,41 @@
         "notes": ""
     },
     {
+        "name": "Asus G752VS-BA329T",
+        "cpu": "Intel Core i7-7700HQ",
+        "gpus": [
+            {
+                "name": "GTX 1070 Mobile (8GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Not possible.",
+                    "Linux": "Not possible."
+                }
+            },
+            {
+                "name": "Intel® UHD Graphics 630",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Not possible.",
+                    "Linux": "Not possible."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "No",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "No",
+            "muxed": "Unknown."
+        },
+        "tested-by": [
+            { "name": "T-vK", "url": "https://github.com/T-vK" }
+        ],
+        "notes": "The iGPU is disabled, there is no UEFI option to enable it."
+    },
+    {
         "name": "OVERPOWERED Gaming Laptop 15+",
         "cpu": "Intel Core i7-8750H",
         "gpus": [
@@ -218,7 +253,7 @@
         "notes": ""
     },
     {
-        "name": "GS63VR 7RF REV:1.0",
+        "name": "MSI GS63VR 7RF REV:1.0",
         "cpu": "Intel Core i7-7700HQ",
         "gpus": [
             {
@@ -498,7 +533,7 @@
         "notes": ""
     },
     {
-        "name": "Clevo N957TP6",
+        "name": "CLEVO N957TP6",
         "cpu": "Unknown (Intel)",
         "gpus": [
             {
