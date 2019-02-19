@@ -148,41 +148,6 @@
         "notes": "The iGPU is disabled, there is no UEFI option to enable it."
     },
     {
-        "name": "OVERPOWERED Gaming Laptop 15+",
-        "cpu": "Intel Core i7-8750H",
-        "gpus": [
-            {
-                "name": "GTX 1060 (6GB)",
-                "type": "dGPU",
-                "passthrough-guests": {
-                    "Windows": "Works, but Nvidia driver fails with error 43.",
-                    "Linux": "Untested, but probably works."
-                }
-            },
-            {
-                "name": "Intel® UHD Graphics 630",
-                "type": "iGPU",
-                "passthrough-guests": {
-                    "Windows": "Untested, but probably works.",
-                    "Linux": "Untested, but probably works."
-                }
-            }
-        ],
-        "checklist": {
-            "linux-compatible": "Yes",
-            "at-least-two-usable-gpus": "Yes",
-            "cpu-supports-iommu": "Yes",
-            "chipset-supports-iommu": "Yes",
-            "uefi-supports-iommu": "Yes",
-            "igpu-usable": "Yes",
-            "muxed": "Probably yes"
-        },
-        "tested-by": [
-            { "name": "jmandawg", "url": "https://github.com/jscinoz/optimus-vfio-docs/issues/2#issuecomment-462598102" }
-        ],
-        "notes": ""
-    },
-    {
         "name": "ASUS ROG G551JW",
         "cpu": "Intel Core i7-4720HQ",
         "gpus": [
@@ -218,23 +183,23 @@
         "notes": ""
     },
     {
-        "name": "Gigabyte Aero 15X v8",
-        "cpu": "Intel Core i7-8750H",
+        "name": "ASUS G751JM",
+        "cpu": "Intel Core i7-4710HQ",
         "gpus": [
             {
-                "name": "GTX 1070 with Max-Q design (8GB)",
+                "name": "GTX 860M (2GB)",
                 "type": "dGPU",
                 "passthrough-guests": {
-                    "Windows": "Works, but Nvidia driver fails with error 43.",
-                    "Linux": "Works."
+                    "Windows": "Works, but similar issue as with the ASUS ROG G551JW",
+                    "Linux": "Unknown."
                 }
             },
             {
-                "name": "Intel® UHD Graphics 630",
+                "name": "Intel® HD Graphics 4600",
                 "type": "iGPU",
                 "passthrough-guests": {
-                    "Windows": "Untested, but probably works.",
-                    "Linux": "Untested, but probably works."
+                    "Windows": "Unknown.",
+                    "Linux": "Unknown."
                 }
             }
         ],
@@ -248,7 +213,7 @@
             "muxed": "Probably yes"
         },
         "tested-by": [
-            { "name": "KenMasters20XX", "url": "https://github.com/jscinoz/optimus-vfio-docs/issues/2#issuecomment-412601884" }
+            { "name": "d0ku", "url": "https://gist.github.com/Misairu-G/616f7b2756c488148b7309addc940b28#gistcomment-2683129" }
         ],
         "notes": ""
     },
@@ -358,23 +323,58 @@
         "notes": ""
     },
     {
-        "name": "ASUS G751JM",
-        "cpu": "Intel Core i7-4710HQ",
+        "name": "MSI GT70 2PE Dominator Pro",
+        "cpu": "Intel Core i7-4800MQ",
         "gpus": [
             {
-                "name": "GTX 860M (2GB)",
+                "name": "GTX 880M (GDDR5 8GB/4GB)",
                 "type": "dGPU",
                 "passthrough-guests": {
-                    "Windows": "Works, but similar issue as with the ASUS ROG G551JW",
-                    "Linux": "Unknown."
+                    "Windows": "Works.",
+                    "Linux": "Untested, but probably works."
                 }
             },
             {
-                "name": "Intel® HD Graphics 4600",
+                "name": " Intel® HD Graphics 4600 ",
                 "type": "iGPU",
                 "passthrough-guests": {
-                    "Windows": "Unknown.",
-                    "Linux": "Unknown."
+                    "Windows": "Untested, but probably works.",
+                    "Linux": "Untested, but probably works."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Unknown."
+        },
+        "tested-by": [
+            { "name": "bash64", "url": "https://gist.github.com/Misairu-G/616f7b2756c488148b7309addc940b28#gistcomment-2622108" }
+        ],
+        "notes": "dGPU passthrough requires SeaBIOS instead of UEFI (OVMF)"
+    },
+    {
+        "name": "Gigabyte Aero 15X v8",
+        "cpu": "Intel Core i7-8750H",
+        "gpus": [
+            {
+                "name": "GTX 1070 with Max-Q design (8GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but Nvidia driver fails with error 43.",
+                    "Linux": "Works."
+                }
+            },
+            {
+                "name": "Intel® UHD Graphics 630",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Untested, but probably works.",
+                    "Linux": "Untested, but probably works."
                 }
             }
         ],
@@ -388,7 +388,7 @@
             "muxed": "Probably yes"
         },
         "tested-by": [
-            { "name": "d0ku", "url": "https://gist.github.com/Misairu-G/616f7b2756c488148b7309addc940b28#gistcomment-2683129" }
+            { "name": "KenMasters20XX", "url": "https://github.com/jscinoz/optimus-vfio-docs/issues/2#issuecomment-412601884" }
         ],
         "notes": ""
     },
@@ -428,41 +428,6 @@
         "notes": ""
     },
     {
-        "name": "MSI GT70 2PE Dominator Pro",
-        "cpu": "Intel Core i7-4800MQ",
-        "gpus": [
-            {
-                "name": "GTX 880M (GDDR5 8GB/4GB)",
-                "type": "dGPU",
-                "passthrough-guests": {
-                    "Windows": "Works.",
-                    "Linux": "Untested, but probably works."
-                }
-            },
-            {
-                "name": " Intel® HD Graphics 4600 ",
-                "type": "iGPU",
-                "passthrough-guests": {
-                    "Windows": "Untested, but probably works.",
-                    "Linux": "Untested, but probably works."
-                }
-            }
-        ],
-        "checklist": {
-            "linux-compatible": "Yes",
-            "at-least-two-usable-gpus": "Yes",
-            "cpu-supports-iommu": "Yes",
-            "chipset-supports-iommu": "Yes",
-            "uefi-supports-iommu": "Yes",
-            "igpu-usable": "Yes",
-            "muxed": "Unknown."
-        },
-        "tested-by": [
-            { "name": "bash64", "url": "https://gist.github.com/Misairu-G/616f7b2756c488148b7309addc940b28#gistcomment-2622108" }
-        ],
-        "notes": "dGPU passthrough requires SeaBIOS instead of UEFI (OVMF)"
-    },
-    {
         "name": "Dell Precision 7510",
         "cpu": "Intel Xeon E3-1200 v5",
         "gpus": [
@@ -470,7 +435,7 @@
                 "name": "Nvidia Quadro M2000M",
                 "type": "dGPU",
                 "passthrough-guests": {
-                    "Windows": "Works, but Nvidia driver fials with error 43.",
+                    "Windows": "Works, but Nvidia driver fails with error 43.",
                     "Linux": "Untested, but probably works."
                 }
             },
@@ -494,6 +459,41 @@
         },
         "tested-by": [
             { "name": "metabubble", "url": "https://gist.github.com/Misairu-G/616f7b2756c488148b7309addc940b28#gistcomment-2625719" }
+        ],
+        "notes": ""
+    },
+    {
+        "name": "OVERPOWERED Gaming Laptop 15+",
+        "cpu": "Intel Core i7-8750H",
+        "gpus": [
+            {
+                "name": "GTX 1060 (6GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but Nvidia driver fails with error 43.",
+                    "Linux": "Untested, but probably works."
+                }
+            },
+            {
+                "name": "Intel® UHD Graphics 630",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Untested, but probably works.",
+                    "Linux": "Untested, but probably works."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably yes"
+        },
+        "tested-by": [
+            { "name": "jmandawg", "url": "https://github.com/jscinoz/optimus-vfio-docs/issues/2#issuecomment-462598102" }
         ],
         "notes": ""
     },
