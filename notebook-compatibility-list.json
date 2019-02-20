@@ -113,6 +113,41 @@
         "notes": ""
     },
     {
+        "name": "ASUS ROG G751JY",
+        "cpu": "Intel Core i7-4710HQ",
+        "gpus": [
+            {
+                "name": "GTX 980M (4GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Not possible.",
+                    "Linux": "Not possible."
+                }
+            },
+            {
+                "name": "Intel® HD Graphics 4600",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Not possible.",
+                    "Linux": "Not possible."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "No",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "No",
+            "muxed": "Unknown."
+        },
+        "tested-by": [
+            { "name": "T-vK", "url": "https://github.com/T-vK" }
+        ],
+        "notes": "The iGPU is disabled, there is no UEFI option to enable it."
+    },
+    {
         "name": "ASUS G752VS-BA329T",
         "cpu": "Intel Core i7-7700HQ",
         "gpus": [
