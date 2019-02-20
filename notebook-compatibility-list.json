@@ -423,7 +423,7 @@
             "muxed": "Probably yes"
         },
         "tested-by": [
-            { "name": "", "url": "" }
+            { "name": "brandsimon", "url": "https://github.com/jscinoz/optimus-vfio-docs/issues/2#issuecomment-465567131" }
         ],
         "notes": ""
     },
