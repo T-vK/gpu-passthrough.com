@@ -460,7 +460,7 @@
         "tested-by": [
             { "name": "brandsimon", "url": "https://github.com/jscinoz/optimus-vfio-docs/issues/2#issuecomment-465567131" }
         ],
-        "notes": "Both card can be passed through at the same time with Intel GVT-g."
+        "notes": "Both card can be passed through at the same time with Intel GVT-g. Bumblebee can be used in the guest."
     },
     {
         "name": "Dell XPS 15 9550",
