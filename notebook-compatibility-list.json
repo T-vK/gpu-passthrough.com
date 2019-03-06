@@ -429,22 +429,22 @@
     },
     {
         "name": "Lenovo ThinkPad P51",
-        "cpu": "Unknown (Intel)",
+        "cpu": "Intel Core i7-7700HQ",
         "gpus": [
             {
                 "name": "NVIDIA Quadro M1200 (4GB)",
                 "type": "dGPU",
                 "passthrough-guests": {
-                    "Windows": "Works.",
-                    "Linux": "Probably works."
+                    "Windows": "Unknown.",
+                    "Linux": "Works."
                 }
             },
             {
-                "name": "Intel® UHD Graphics 630(?) or P630(?)",
+                "name": "Intel® UHD Graphics 630",
                 "type": "iGPU",
                 "passthrough-guests": {
                     "Windows": "Unknown.",
-                    "Linux": "Unknown."
+                    "Linux": "Works."
                 }
             }
         ],
@@ -460,7 +460,7 @@
         "tested-by": [
             { "name": "brandsimon", "url": "https://github.com/jscinoz/optimus-vfio-docs/issues/2#issuecomment-465567131" }
         ],
-        "notes": ""
+        "notes": "Both card can be passed through at the same time with Intel GVT-g."
     },
     {
         "name": "Dell XPS 15 9550",
