@@ -253,6 +253,41 @@
         "notes": ""
     },
     {
+        "name": "ASUS X550VX",
+        "cpu": "Intel Core i5-6300HQ",
+        "gpus": [
+            {
+                "name": "GTX 950M (2GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works. (Possibly similar issues as with the ASUS ROG G551JW)",
+                    "Linux": "Unknown."
+                }
+            },
+            {
+                "name": "Intel® HD Graphics 530",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Unknown.",
+                    "Linux": "Unknown."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably yes"
+        },
+        "tested-by": [
+            { "name": "ArtyomFR", "url": "https://github.com/jscinoz/optimus-vfio-docs/issues/2#issuecomment-471171390" }
+        ],
+        "notes": ""
+    },    
+    {
         "name": "MSI GS63VR 7RF REV:1.0",
         "cpu": "Intel Core i7-7700HQ",
         "gpus": [
