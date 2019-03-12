@@ -498,6 +498,40 @@
         "notes": "Both card can be passed through at the same time with Intel GVT-g. Bumblebee can be used in the guest."
     },
     {
+        "name": "Lenovo Legion Y7000",
+        "cpu": "Intel Core i7-8750H",
+        "gpus": [
+            {
+                "name": "GTX 1060 Mobile (6GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but Nvidia driver fails with error 43.",
+                    "Linux": "Untested, but probably works."
+                }
+            },
+            {
+                "name": "Intel® UHD Graphics 630",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Untested, but probably works.",
+                    "Linux": "Untested, but probably works."
+                }
+            },
+        ],
+        "checklist": {
+            "linux-compatible": "Yes, no issues",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably yes"
+        },
+        "tested-by": [
+            { "name": "samkg", "url": "https://github.com/samkg" }
+        ]
+    },
+    {
         "name": "Dell XPS 15 9550",
         "cpu": "Intel Core i7-6700HQ",
         "gpus": [
