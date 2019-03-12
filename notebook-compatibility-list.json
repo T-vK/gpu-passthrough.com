@@ -516,7 +516,7 @@
                     "Windows": "Untested, but probably works.",
                     "Linux": "Untested, but probably works."
                 }
-            },
+            }
         ],
         "checklist": {
             "linux-compatible": "Yes, no issues",
