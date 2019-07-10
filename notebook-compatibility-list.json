@@ -50,7 +50,7 @@
                 "name": "GTX 980M (8GB)",
                 "type": "dGPU",
                 "passthrough-guests": {
-                    "Windows": "Works.",
+                    "Windows": "Works, but some apps only run with RDP",
                     "Linux": "Unknown."
                 }
             },
@@ -128,8 +128,8 @@
                 "name": "Intel® HD Graphics 4000",
                 "type": "iGPU",
                 "passthrough-guests": {
-                    "Windows": "Not possible.",
-                    "Linux": "Not possible."
+                    "Windows": "Not supported on 4th gen Intel CPUs and older.",
+                    "Linux": "Not supported on 4th gen Intel CPUs and older."
                 }
             }
         ],
@@ -163,8 +163,8 @@
                 "name": "Intel® HD Graphics 4600",
                 "type": "iGPU",
                 "passthrough-guests": {
-                    "Windows": "Not possible.",
-                    "Linux": "Not possible."
+                    "Windows": "Not supported on 4th gen Intel CPUs and older.",
+                    "Linux": "Not supported on 4th gen Intel CPUs and older."
                 }
             }
         ],
@@ -233,8 +233,8 @@
                 "name": "Intel® HD Graphics 4600",
                 "type": "iGPU",
                 "passthrough-guests": {
-                    "Windows": "Unknown.",
-                    "Linux": "Unknown."
+                    "Windows": "Not supported on 4th gen Intel CPUs and older.",
+                    "Linux": "Not supported on 4th gen Intel CPUs and older."
                 }
             }
         ],
@@ -260,7 +260,7 @@
                 "name": "GTX 860M (2GB)",
                 "type": "dGPU",
                 "passthrough-guests": {
-                    "Windows": "Works, but similar issue as with the ASUS ROG G551JW",
+                    "Windows": "Works, but some apps only run with RDP",
                     "Linux": "Unknown."
                 }
             },
@@ -268,8 +268,8 @@
                 "name": "Intel® HD Graphics 4600",
                 "type": "iGPU",
                 "passthrough-guests": {
-                    "Windows": "Unknown.",
-                    "Linux": "Unknown."
+                    "Windows": "Not supported on 4th gen Intel CPUs and older.",
+                    "Linux": "Not supported on 4th gen Intel CPUs and older."
                 }
             }
         ],
@@ -295,7 +295,7 @@
                 "name": "GTX 950M (2GB)",
                 "type": "dGPU",
                 "passthrough-guests": {
-                    "Windows": "Works. (Possibly similar issues as with the ASUS ROG G551JW)",
+                    "Windows": "Works, but some apps only run with RDP",
                     "Linux": "Unknown."
                 }
             },
@@ -365,7 +365,7 @@
                 "name": "GTX 970M (3GB)",
                 "type": "dGPU",
                 "passthrough-guests": {
-                    "Windows": "Works, but similar issue as with the ASUS ROG G551JW",
+                    "Windows": "Works, but some apps only run with RDP",
                     "Linux": "Unknown."
                 }
             },
@@ -373,8 +373,8 @@
                 "name": "Intel® HD Graphics 4600",
                 "type": "iGPU",
                 "passthrough-guests": {
-                    "Windows": "Unknown.",
-                    "Linux": "Unknown."
+                    "Windows": "Not supported on 4th gen Intel CPUs and older.",
+                    "Linux": "Not supported on 4th gen Intel CPUs and older."
                 }
             }
         ],
@@ -400,7 +400,7 @@
                 "name": "GTX 860M (2GB)",
                 "type": "dGPU",
                 "passthrough-guests": {
-                    "Windows": "Works.",
+                    "Windows": "Works, but some apps only run with RDP",
                     "Linux": "Unknown."
                 }
             },
@@ -408,8 +408,8 @@
                 "name": "Intel® HD Graphics 4600",
                 "type": "iGPU",
                 "passthrough-guests": {
-                    "Windows": "Unknown.",
-                    "Linux": "Unknown."
+                    "Windows": "Not supported on 4th gen Intel CPUs and older.",
+                    "Linux": "Not supported on 4th gen Intel CPUs and older."
                 }
             }
         ],
@@ -435,7 +435,7 @@
                 "name": "GTX 880M (GDDR5 8GB/4GB)",
                 "type": "dGPU",
                 "passthrough-guests": {
-                    "Windows": "Works.",
+                    "Windows": "Works, but some apps only run with RDP",
                     "Linux": "Untested, but probably works."
                 }
             },
@@ -443,8 +443,8 @@
                 "name": " Intel® HD Graphics 4600 ",
                 "type": "iGPU",
                 "passthrough-guests": {
-                    "Windows": "Untested, but probably works.",
-                    "Linux": "Untested, but probably works."
+                    "Windows": "Not supported on 4th gen Intel CPUs and older.",
+                    "Linux": "Not supported on 4th gen Intel CPUs and older."
                 }
             }
         ],
@@ -461,6 +461,41 @@
             { "name": "bash64", "url": "https://gist.github.com/Misairu-G/616f7b2756c488148b7309addc940b28#gistcomment-2622108" }
         ],
         "notes": "dGPU passthrough requires SeaBIOS instead of UEFI (OVMF)"
+    },
+    {
+        "name": "Gigabyte Aero 14",
+        "cpu": "Intel® Core™ i7-7700HQ",
+        "gpus": [
+            {
+                "name": "GTX 1050 Ti (4GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but some apps only run with RDP",
+                    "Linux": "Unknown."
+                }
+            },
+            {
+                "name": "Intel® HD Graphics 630",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but some apps only run with RDP",
+                    "Linux": "Unknown."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably yes"
+        },
+        "tested-by": [
+            { "name": "atobenzo", "url": "https://github.com/jscinoz/optimus-vfio-docs/issues/2#issuecomment-490159102" }
+        ],
+        "notes": "Requires a modded UEFI/BIOS (to disable secureboot). Contact me if you need the files or instructions on how to mod it yourself."
     },
     {
         "name": "Gigabyte Aero 15X v8",
@@ -705,6 +740,41 @@
             { "name": "s2156945", "url": "https://gist.github.com/Misairu-G/616f7b2756c488148b7309addc940b28#gistcomment-2646390" }
         ],
         "notes": ""
+    },
+    {
+        "name": "XMG P505 (Clevo P650SG)",
+        "cpu": "Intel Core i7-4720HQ",
+        "gpus": [
+            {
+                "name": "GTX 970M (4GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but some apps only run on RDP",
+                    "Linux": "Untested, but probably works."
+                }
+            },
+            {
+                "name": "Intel® HD Graphics 4600",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Not supported on 4th gen Intel CPUs and older.",
+                    "Linux": "Not supported on 4th gen Intel CPUs and older."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably muxed."
+        },
+        "tested-by": [
+            { "name": "gordan-bobic", "url": "https://github.com/jscinoz/optimus-vfio-docs/issues/2#issuecomment-493691545" }
+        ],
+        "notes": "Requires the Nvidia driver that ships with Windows 10 (353.82)"
     },
     {
         "name": "CLEVO N957TP6",
