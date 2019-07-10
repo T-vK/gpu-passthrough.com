@@ -495,7 +495,7 @@
         "tested-by": [
             { "name": "atobenzo", "url": "https://github.com/jscinoz/optimus-vfio-docs/issues/2#issuecomment-490159102" }
         ],
-        "notes": "Requires a modded UEFI/BIOS (to disable secureboot). Contact me if you need the files or instructions on how to mod it yourself."
+        "notes": ""
     },
     {
         "name": "Gigabyte Aero 15X v8",
