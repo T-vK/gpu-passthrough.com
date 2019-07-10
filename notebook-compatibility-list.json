@@ -599,7 +599,8 @@
         },
         "tested-by": [
             { "name": "samkg", "url": "https://github.com/samkg" }
-        ]
+        ],
+        "notes": ""
     },
     {
         "name": "Dell XPS 15 9550",
