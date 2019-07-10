@@ -43,6 +43,41 @@
         "notes": "Supports TB3 eGPUs"
     },
     {
+        "name": "Gigabyte P35X v4",
+        "cpu": "Intel Core i7-5700HQ",
+        "gpus": [
+            {
+                "name": "GTX 980M (8GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works.",
+                    "Linux": "Unknown."
+                }
+            },
+            {
+                "name": "Intel® HD Graphics 5600",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Works.",
+                    "Linux": "Unknown."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably yes"
+        },
+        "tested-by": [
+            { "name": "T-vK", "url": "https://github.com/T-vK" }
+        ],
+        "notes": "Requires a modded UEFI/BIOS (to disable secureboot). Contact me if you need the files or instructions on how to mod it yourself."
+    },
+    {
         "name": "MSI GF72 8RE-032",
         "cpu": "Intel Core i7-8750H",
         "gpus": [
