@@ -50,7 +50,7 @@
                 "name": "GTX 980M (8GB)",
                 "type": "dGPU",
                 "passthrough-guests": {
-                    "Windows": "Works, but some apps only run with RDP",
+                    "Windows": "Works*",
                     "Linux": "Unknown."
                 }
             },
@@ -58,7 +58,7 @@
                 "name": "Intel® HD Graphics 5600",
                 "type": "iGPU",
                 "passthrough-guests": {
-                    "Windows": "Works.",
+                    "Windows": "Works*",
                     "Linux": "Unknown."
                 }
             }
@@ -225,7 +225,7 @@
                 "name": "GTX 960M (2GB/4GB DDR3)",
                 "type": "dGPU",
                 "passthrough-guests": {
-                    "Windows": "Works, but some apps only run with RDP",
+                    "Windows": "Works*",
                     "Linux": "Unknown."
                 }
             },
@@ -260,7 +260,7 @@
                 "name": "GTX 860M (2GB)",
                 "type": "dGPU",
                 "passthrough-guests": {
-                    "Windows": "Works, but some apps only run with RDP",
+                    "Windows": "Works*",
                     "Linux": "Unknown."
                 }
             },
@@ -295,7 +295,7 @@
                 "name": "GTX 950M (2GB)",
                 "type": "dGPU",
                 "passthrough-guests": {
-                    "Windows": "Works, but some apps only run with RDP",
+                    "Windows": "Works*",
                     "Linux": "Unknown."
                 }
             },
@@ -365,7 +365,7 @@
                 "name": "GTX 970M (3GB)",
                 "type": "dGPU",
                 "passthrough-guests": {
-                    "Windows": "Works, but some apps only run with RDP",
+                    "Windows": "Works*",
                     "Linux": "Unknown."
                 }
             },
@@ -400,7 +400,7 @@
                 "name": "GTX 860M (2GB)",
                 "type": "dGPU",
                 "passthrough-guests": {
-                    "Windows": "Works, but some apps only run with RDP",
+                    "Windows": "Works*",
                     "Linux": "Unknown."
                 }
             },
@@ -435,7 +435,7 @@
                 "name": "GTX 880M (GDDR5 8GB/4GB)",
                 "type": "dGPU",
                 "passthrough-guests": {
-                    "Windows": "Works, but some apps only run with RDP",
+                    "Windows": "Works*",
                     "Linux": "Untested, but probably works."
                 }
             },
@@ -470,7 +470,7 @@
                 "name": "GTX 1050 Ti (4GB)",
                 "type": "dGPU",
                 "passthrough-guests": {
-                    "Windows": "Works, but some apps only run with RDP",
+                    "Windows": "Works*",
                     "Linux": "Unknown."
                 }
             },
@@ -478,7 +478,7 @@
                 "name": "Intel® HD Graphics 630",
                 "type": "iGPU",
                 "passthrough-guests": {
-                    "Windows": "Works, but some apps only run with RDP",
+                    "Windows": "Works*",
                     "Linux": "Unknown."
                 }
             }
@@ -634,6 +634,41 @@
         },
         "tested-by": [
             { "name": "Lukypie", "url": "https://gist.github.com/Misairu-G/616f7b2756c488148b7309addc940b28#gistcomment-2674241" }
+        ],
+        "notes": ""
+    },
+    {
+        "name": "Dell XPS 15 9570",
+        "cpu": "Intel Core i7-8750H",
+        "gpus": [
+            {
+                "name": "GTX 1050Ti (4GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works*",
+                    "Linux": "Untested, but probably works."
+                }
+            },
+            {
+                "name": "Intel® UHD Graphics 630",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Works*",
+                    "Linux": "Untested, but probably works."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably yes."
+        },
+        "tested-by": [
+            { "name": "bitthief", "url": "https://github.com/jscinoz/optimus-vfio-docs/issues/2#issuecomment-510648613" }
         ],
         "notes": ""
     },
