@@ -148,6 +148,40 @@
         "notes": ""
     },
     {
+        "name": "ASUS TUF Gaming FX505DY",
+        "cpu": "AMD Ryzen 5 3550H",
+        "gpus": [
+            {
+                "name": "AMD Radeon Vega 8",
+                "type": "iGPU",
+                "passthrough-guests": {
+                    "Windows": "Untested, but probably works.",
+                    "Linux": "Untested, but probably works."
+                }
+            },
+            {
+                "name": "AMD Radeon RX 560X (4GB)",
+                "type": "dGPU",
+                "passthrough-guests": {
+                    "Windows": "Works, but AMD driver fails with error 43.",
+                    "Linux": "Works."
+                }
+            }
+        ],
+        "checklist": {
+            "linux-compatible": "Yes, no issues",
+            "at-least-two-usable-gpus": "Yes",
+            "cpu-supports-iommu": "Yes",
+            "chipset-supports-iommu": "Yes",
+            "uefi-supports-iommu": "Yes",
+            "igpu-usable": "Yes",
+            "muxed": "Probably yes"
+        },
+        "tested-by": [
+            { "name": "jdoe0", "url": "https://github.com/jdoe0" }
+        ]
+    },
+    {
         "name": "ASUS ROG G751JY",
         "cpu": "Intel Core i7-4710HQ",
         "gpus": [
